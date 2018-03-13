@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Need to open new terminal before using this script
+echo
+echo
+echo "this script will use the existing terminal to run and open a new terminal"
+echo
+read
+#commnad to run new terminal
+open -a Terminal "`pwd`"
+
+#monitor disk space every 2 seconds
+watch df -h
+
+
+
