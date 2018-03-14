@@ -1,16 +1,22 @@
 #!/bin/bash
 
-#Need to open new terminal before using this script
-echo
-echo
+echo "This script is for monitoring disk usage for every 2 seconds, some applications are space intensive or issues where it causes
+echo partition to quickly fill up.
+echo "This will also install the command "watch"
 echo "this script will use the existing terminal to run and open a new terminal"
-echo
+echo 
 read
-#commnad to run new terminal
+# Install "watch" watch command
+apt-get install watch && apt-get update watch
+read
+
+#commnad to run new terminal under the current working directory
 open -a Terminal "`pwd`"
+read
 
 #monitor disk space every 2 seconds
 watch df -h
+
 
 
 
